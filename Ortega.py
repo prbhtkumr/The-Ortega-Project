@@ -15,7 +15,9 @@ import wikipedia
 from colorama import Fore,Back,Style
 import base64
 os.system("cls")
-#初期化
+
+#initialization
+
 r = sr.Recognizer()
 engine = pyttsx3.init()
 rate = engine.getProperty('rate')                           
@@ -25,7 +27,6 @@ engine = pyttsx3.init()
 os.system("cls")
 print(Style.RESET_ALL)
 
-#定義
 engine.say("What do you want the input method to be?")
 print("\n\n\nWhat do you want the input method to be?\n\n   [1] Type\n   [2] Speech")
 engine.runAndWait()
@@ -60,8 +61,6 @@ print( '\t'*7+'                    .3P"%....                   ')
 print( '\t'*7+'                  nP"     "*MMnx         Prabhat')
 time.sleep(3)
 print(Style.RESET_ALL)
-
-#あいさつ
 
 def exit():
 	os.system('cls')
@@ -155,7 +154,7 @@ def cmd():
 	os.system('start')
 
 
-#知識源
+
 while True:
 	os.system("cls")
 	engine.say("What's you Query?")
