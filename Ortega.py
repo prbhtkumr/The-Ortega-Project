@@ -25,42 +25,11 @@ engine.setProperty('rate', 150)
 engine = pyttsx3.init()
 
 os.system("cls")
-print(Style.RESET_ALL)
 
 engine.say("What do you want the input method to be?")
 print("\n\n\nWhat do you want the input method to be?\n\n   [1] Type\n   [2] Speech")
 engine.runAndWait()
 mode = input()
-
-
-os.system("cls")
-print(Fore.GREEN+Style.BRIGHT)
-print( '\t'*7+'                     .                          ')
-print( '\t'*7+'     Legalize        M                          ')
-print( '\t'*7+'          Cannabis  dM                          ')
-print( '\t'*7+'                    MMr                         ')
-print( '\t'*7+'                   4MMML                  .     ')
-print( '\t'*7+'                   MMMMM.                xf     ')
-print( '\t'*7+'   .              "MMMMM               .MM-     ')
-print( '\t'*7+'    Mh..          +MMMMMM            .MMMM      ')
-print( '\t'*7+'    .MMM.         .MMMMML.          MMMMMh      ')
-print( '\t'*7+'     )MMMh.        MMMMMM         MMMMMMM       ')
-print( '\t'*7+'      3MMMMx.     \'MMMMMMf      xnMMMMMM"       ')
-print( '\t'*7+'      \'*MMMMM      MMMMMM.     nMMMMMMP"        ')
-print( '\t'*7+'        *MMMMMx    "MMMMM\\    .MMMMMMM=        ') 
-print( '\t'*7+'         *MMMMMh   "MMMMM"   JMMMMMMP           ')
-print( '\t'*7+'           MMMMMM   3MMMM.  dMMMMMM            .')
-print( '\t'*7+'            MMMMMM  "MMMM  .MMMMM(        .nnMP"')
-print( '\t'*7+'=..          *MMMMx  MMM"  dMMMM"    .nnMMMMM*  ')
-print( '\t'*7+'  "MMn...     \'MMMMr \'MM   MMM"   .nMMMMMMM*"   ')
-print( '\t'*7+'   "4MMMMnn..   *MMM  MM  MMP"  .dMMMMMMM""     ')
-print( '\t'*7+'     ^MMMMMMMMx.  *ML "M .M*  .MMMMMM**"        ')
-print( '\t'*7+'        *PMMMMMMhn. *x > M  .MMMM**""           ')
-print( '\t'*7+'           ""**MMMMhx/.h/ .=*"                  ')
-print( '\t'*7+'                    .3P"%....                   ')
-print( '\t'*7+'                  nP"     "*MMnx         Prabhat')
-time.sleep(3)
-print(Style.RESET_ALL)
 
 def exit():
 	os.system('cls')
@@ -72,26 +41,10 @@ def say(var):
 	engine.runAndWait()
 
 def name():
-	say("My name is Ortega, atleast that's what \"he\" (my creator) calls me!")
-	print("My name is Ortega")
-	print("Atleast that's what \"He\" (My Creator) calls me.")
+	say("My name is Sunday")
+	print("My name is Sunday.")
 	print("\n\t\t\t\t\t :)")
 	time.sleep(2)
-
-def creator():
-	say("Prabhat is my creator.")
-	print("Prabhat is my creator.")
-	rate = engine.getProperty('rate')                           
-	engine.setProperty('rate', 205)     
-	say("Waahi haai saarva shaakti shaaali bhaagwaaan, aasvaatthhaaamaa.")
-	print("Wahi hai saarva shakti-shaali bhagwaan, Asvathama!")
-	time.sleep(2)
-	say("He also is my doctor, whenever I get a bug, he solves it with ease. caring he is.! ")
-
-def god():
-	say("Praabhaaat. Wahi haai saarva shaakti shaaali bhaagwaaan, aasvaatthhaaamaa!")
-	print("Prabhat")
-	print("Wahi hai saarva shakti-shaali bhagwaan, Asvathama!")
 
 def wait():
 	os.system("cls")
@@ -104,6 +57,7 @@ def wait():
 			sys.stdout.flush()
 	os.system("cls")
 	input("\n\n\nAlright \n..Waiting \n...Press any key to End")
+
 def wiki():
 	engine.say("let me ask Wichishiki")
 	print("Let me ask Wichishiki :)")
@@ -117,6 +71,7 @@ def wiki():
 	print(response)
 	engine.runAndWait() 
 	input()
+
 def lyrics():
 	print("Prabhat")
 	print("----------------------------------")
@@ -129,8 +84,8 @@ def lyrics():
 	class MyHTMLParser(HTMLParser):
 	    def __init__(self):
 	        super().__init__()
-	        self.p=False
-	        self.pbuf=[]
+					self.p=False
+					self.pbuf=[]
 	    def handle_starttag(self, tag, attrs):
 	        attrs = dict(attrs)
 	        if tag=="div" and not attrs:
@@ -150,6 +105,7 @@ def lyrics():
 	parser = MyHTMLParser()
 	parser.feed(link)
 	print('\n\nPrabhat')
+
 def cmd():
 	os.system('start')
 
@@ -221,14 +177,8 @@ while True:
 	elif inpt=="who are you":
 		name()
 		continue
-	elif inpt=="who made you":
-		creator()
-		continue
 	elif inpt=="change mode":
 		mode()
-		continue
-	elif inpt=="who created you":
-		creator()
 		continue
 	elif inpt=="start speaking":
 		mode()
@@ -238,21 +188,6 @@ while True:
 		continue
 	elif inpt=="change input mode":
 		mode()
-		continue	
-	elif inpt=="who's your creator":
-		creator()
-		continue
-	elif inpt=="who is your creator":
-		creator()
-		continue
-	elif inpt=="who is you god":
-		god()
-		continue
-	elif inpt=="who's your god":
-		god()
-		continue
-	elif inpt=="bhagwaan mein maante ho":
-		god()
 		continue
 	elif inpt=="wait":
 		wait()
