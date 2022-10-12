@@ -73,7 +73,6 @@ def wiki():
 	input()
 
 def lyrics():
-	print("Prabhat")
 	print("----------------------------------")
 	inp=input("enter name of artist and name of song separated by / :   ").lower().replace(" ", '')or"edsheeran/eraser";inp=inp.split('/') if '/' in inp and inp.count('/') == 1 else 'you need to seperate the artist name from his/her title using /' if not '/' in inp or inp.count('/') > 1 else 'Invalid input....\nplease check the top comment of this code';artist,title = inp[0],inp[1]
 	print('Artist: {}\nTitle: {}\n{}'.format(artist.title(),title.title(),'-'*25))
