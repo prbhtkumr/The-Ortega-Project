@@ -39,5 +39,3 @@ Happy Learning!
 
 
 
-
-`instagram: @aerosol_can.py`
